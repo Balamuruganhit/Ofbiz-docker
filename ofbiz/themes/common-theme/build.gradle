@@ -18,7 +18,7 @@
  */
 
 plugins {
-    id 'ofbiz-node-conventions'
+    id 'ofbiz-node-conventions' version '1.0.0' 
 }
 
 node {
