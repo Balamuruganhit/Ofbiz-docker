@@ -358,7 +358,7 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext-demo"/>
         <inline-jdbc
                 jdbc-driver="com.mysql.jdbc.Driver"
-                jdbc-uri="jdbc:mysql://db-server/ofbiz?autoReconnect=true&amp;characterEncoding=UTF-8"
+                jdbc-uri="jdbc:mysql://db-server/ofbiz?autoReconnect=true&amp;characterEncoding=UTF-8&amp;useSSL=false"
                 jdbc-username="ofbiz"
                 jdbc-password="ofbiz"
                 isolation-level="ReadCommitted"
@@ -392,7 +392,7 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="ext-demo"/>
         <inline-jdbc
                 jdbc-driver="com.mysql.jdbc.Driver"
-                jdbc-uri="jdbc:mysql://db-server/ofbizolap?autoReconnect=true&amp;characterEncoding=UTF-8"
+                jdbc-uri="jdbc:mysql://db-server/ofbizolap?autoReconnect=true&amp;characterEncoding=UTF-8&amp;useSSL=false"
                 jdbc-username="ofbiz"
                 jdbc-password="ofbiz"
                 isolation-level="ReadCommitted"
@@ -455,7 +455,7 @@ access. For a detailed description see the core/docs/entityconfig.html file.
         <read-data reader-name="seed"/>
         <inline-jdbc
                 jdbc-driver="com.mysql.jdbc.Driver"
-                jdbc-uri="jdbc:mysql://db-server/ofbiz_odbc?autoReconnect=true&amp;characterEncoding=UTF-8"
+                jdbc-uri="jdbc:mysql://db-server/ofbiz_odbc?autoReconnect=true&amp;characterEncoding=UTF-8&amp;useSSL=false"
                 jdbc-username="ofbiz"
                 jdbc-password="ofbiz"
                 isolation-level="ReadCommitted"
