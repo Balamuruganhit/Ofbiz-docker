@@ -17,29 +17,10 @@
  * under the License.
  */
 
-var labelObject
+plugins {
+    id 'ofbiz-node-conventions'
+}
 
-//this code needs modifications yet its specific.
-
-jQuery(document).ready( function() {
-  jQuery("input[name*='fromDate']").on('focusout', checkDate);
-  jQuery("input[name*='thruDate']").on('focusout', checkDate);
-  if (jQuery("input[name*='fromDate']").length !== 0) {
-    // retrieve label for date control
-    labelObject = ["CommonFromDateThruDateCheck"];
-    getJSONuiLabels(labelObject, function(result){
-      labelObject = result.responseJSON;
-    });
-  }
-});
-
-function checkDate() {
-  var a = jQuery("input[name*='fromDate']");
-  var b = jQuery("input[name*='thruDate']");
-
-  if(a.val() !="" && b.val() !="") {
-    if (a.val() >= b.val()) {
-      showjGrowlMessage(labelObject.CommonFromDateThruDateCheck, 'errorMessageJGrowl', true, null, null, null, "center");
-    }
-  }
+node {
+    nodeProjectDir = file('webapp/common/js')
 }

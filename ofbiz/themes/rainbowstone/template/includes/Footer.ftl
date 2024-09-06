@@ -18,12 +18,10 @@ under the License.
 -->
 <div id="footer-offset"></div>
 <div id="footer">
-    <span>${nowTimestamp?datetime?string.short} - <a href="<@ofbizUrl>ListTimezones</@ofbizUrl>">${timeZone.getDisplayName(timeZone.useDaylightTime(), Static["java.util.TimeZone"].LONG, locale)}</a></span>
-    <span>${uiLabelMap.CommonCopyright} (c) 2001-${nowTimestamp?string("yyyy")} 
-        <a href="http://www.apache.org" target="_blank">The Apache Software Foundation</a>. ${uiLabelMap.CommonPoweredBy}
-        <a href="http://ofbiz.apache.org" target="_blank">Apache OFBiz.</a> ${uiLabelMap.CommonRelease}
-        <#include "ofbizhome://VERSION" ignore_missing=true/>
-        <#include "ofbizhome://runtime/GitInfo.ftl" ignore_missing=true/>
+    <span>${nowTimestamp?datetime?string.short} - <a href="<@ofbizUrl>ListTimezones</@ofbizUrl>">${timeZone.toZoneId().getDisplayName(Static["java.time.format.TextStyle"].FULL_STANDALONE, locale)}</a></span>
+    <span> ${uiLabelMap.CommonCopyright} (c)  2023-${nowTimestamp?string("yyyy")}
+        <a href=""http://www.pangun.tech"" target="_blank">Pangun Technologies</a>.
+        Powered by <a href="http://www.pangun.tech" class="noicon">Pangun NeoERP </a>
     </span>
 </div>
 </div>
